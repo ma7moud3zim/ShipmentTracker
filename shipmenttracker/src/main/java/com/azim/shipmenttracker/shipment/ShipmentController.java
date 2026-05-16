@@ -1,5 +1,6 @@
 package com.azim.shipmenttracker.shipment;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,14 +12,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.validation.Valid;
-import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/api/shipments")
-@RequiredArgsConstructor
-public class ShipmentController {
-	private final ShipmentService shipServ;
+@RequestMapping("/api/shipments") 
 
+public class ShipmentController {
+    @Autowired
+	private ShipmentService shipServ;
+
+    public ShipmentController(ShipmentService shipServ) {
+        this.shipServ = shipServ;
+    }
+    
 	@PostMapping
 	public ResponseEntity<?> createShipment(@Valid @RequestBody 
 													ShipmentDTO.CreateShipmentRequest request) {
