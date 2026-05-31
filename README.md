@@ -48,89 +48,54 @@ A full-stack shipment tracking system that allows users to create shipments, upd
 ## Project Structure
 
 ### Frontend (Angular)
+```
 shipment-fe/
-
 ├── .angular/
-
 ├── .vscode/
-
 ├── node_modules/
-
 ├── public/
-
 ├── src/
-
-│ ├── app/
-
-│ │ ├── create-shipment/ # Create form component
-
-│ │ ├── header/ # Site header component
-
-│ │ ├── models/ # TypeScript interfaces/models
-
-│ │ ├── notification/ # Toast/notification service
-
-│ │ ├── service/ # API and WebSocket services
-
-│ │ ├── shipment-grid/ # Grid view component
-
-│ │ ├── update-shipment/ # Update status form
-
-│ │ ├── app.config.ts
-
-│ │ ├── app.css
-
-│ │ ├── app.html
-
-│ │ ├── app.routes.ts
-
-│ │ └── app.ts
-
-│ ├── index.html
-
-│ ├── main.ts
-
-│ └── styles.css
-
+│   ├── app/
+│   │   ├── create-shipment/     # Create form component
+│   │   ├── header/              # Site header component
+│   │   ├── models/              # TypeScript interfaces/models
+│   │   ├── notification/        # Toast/notification service
+│   │   ├── service/             # API and WebSocket services
+│   │   ├── shipment-grid/       # Grid view component
+│   │   ├── update-shipment/     # Update status form
+│   │   ├── app.config.ts
+│   │   ├── app.css
+│   │   ├── app.html
+│   │   ├── app.routes.ts
+│   │   └── app.ts
+│   ├── index.html
+│   ├── main.ts
+│   └── styles.css
 ├── angular.json
-
 ├── package.json
-
-└──..
+└── ...
+```
 
 
 ### Backend (Spring Boot)
+```
 shipmenttracker/
-
 ├── src/main/java/com/azim/shipmenttracker/
-
-│ ├── ShipmentTrackerApplication.java
-
-│ ├── config/
-
-│ │ ├── CorsConfig.java
-
-│ │ └── WebSocketConfig.java
-
-│ ├── shipment/
-
-│ │ ├── Shipment.java # Entity
-
-│ │ ├── ShipmentController.java # REST endpoints
-
-│ │ ├── ShipmentDTO.java # Data transfer object
-
-│ │ ├── ShipmentRepository.java # JPA repository
-
-│ │ ├── ShipmentService.java # Business logic
-
-│ │ └── ShipmentStatus.java # Enum (ORDER_PLACED, PROCESSING, EXCEPTION...)
-
+│   ├── ShipmentTrackerApplication.java
+│   ├── config/
+│   │   ├── CorsConfig.java
+│   │   └── WebSocketConfig.java
+│   └── shipment/
+│       ├── Shipment.java            # Entity
+│       ├── ShipmentController.java  # REST endpoints
+│       ├── ShipmentDTO.java         # Data transfer object
+│       ├── ShipmentRepository.java  # JPA repository
+│       ├── ShipmentService.java     # Business logic
+│       └── ShipmentStatus.java      # Enum (ORDER_PLACED, PROCESSING, EXCEPTION...)
 ├── src/main/resources/
-
 ├── pom.xml
-
 └── ...
+```
 
 
 ## Screenshots
